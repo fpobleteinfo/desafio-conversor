@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Monedas | Desafio Felipe Poblete</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <div class="carta">
+        <div class="conversor">
+            <h1>Conversor de Monedas Nacional</h1>
+            <hr>
+            </hr>
+            <div class="form-group">
+                <label for="monto-clp">Pesos CLP</label>
+                <input type="text" class="form-control" id="monto-clp" placeholder="Ingrese monto en CLP">
+            </div>
+
+
+            <div class="form-group">
+                <label for="select">Moneda a convertir:</label>
+                <select class="form-control" id="select" onchange="ObtengoValorMonedaDelDia()">
+                    <option value="0">--SELECCIONE--</option>
+                    <option value="dolar">Dolar USD$</option>
+                    <option value="euro">Euro</option>
+                </select>
+            </div>
+
+            <button class="btn btn-primary mb-1" onclick="convertirClp()">Convertir</button>
+            <hr>
+        </hr>
+        <div id="valorDia"></div>
+        <div id="valorConvesion"></div>
+        </div>
+
+    </div>
+
+        <div class="grafica">
+        <canvas id="myChart"></canvas>
+        </div>
+          
+
+
+<script src="assets/js/index.js" ></script>
+<!-- <script src="assets/js/grafico.js" ></script> -->
+</body>
+
+</html>
